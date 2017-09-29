@@ -18,7 +18,13 @@ public class Complex4 {
 		Complex4 c5 = c1.sub(c2);
 		Complex4 c6 = c1.neg(); // -c1
 		System.out.println(c1); // 1+2i  (1,2)  choose one representation
-		Complex4 c7 = c1.conj();
+		System.out.println(c2); // 1+2i  (1,2)  choose one representation
+		System.out.println(c3); // 1+2i  (1,2)  choose one representation
+		System.out.println(c4); // 1+2i  (1,2)  choose one representation
+		System.out.println(c5);
+		System.out.println(c6);
+		Complex4 c7 = c1.conj(); // complex conjugate 1-2i
+		System.out.println(c7);
 	}
 }
 
