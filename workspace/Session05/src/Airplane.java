@@ -8,10 +8,14 @@ public class Airplane {
 	}
 	
 	public void fly() {
-		fuel --;
+		fuel--;
 		if (fuel <= 0)
 			crash();
 		System.out.println("flying");
+	}
+	public void land() {}
+	public void refuel(int fuel) {
+		this.fuel += fuel;
 	}
 	public void crash() {
 		System.out.println("crash");

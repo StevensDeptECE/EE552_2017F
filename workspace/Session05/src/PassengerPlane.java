@@ -1,3 +1,5 @@
+// extends = IS_A   = IS A KIND OF
+
 public class PassengerPlane extends Airplane {
 	public void serveCoffee() {
 		System.out.println("coffee or tea?");

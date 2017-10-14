@@ -8,7 +8,7 @@ public class MyWin3 extends JFrame {
 		super(title);
 		Container c = getContentPane();
 		c.setBackground(bg);
-		setSize(w, h);
+		c.setSize(w, h);
 		JButton b = new JButton("ok");
 		b.setVisible(true);
 		c.add(BorderLayout.NORTH, b);
@@ -25,7 +25,6 @@ public class MyWin3 extends JFrame {
 		c.add(BorderLayout.SOUTH, p);
 		setVisible(true);
 	}
-	
 	
 	public static void main(String[] args) {
 		new MyWin3("Test1", Color.RED, 400, 200);
