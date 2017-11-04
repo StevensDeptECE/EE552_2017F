@@ -1,3 +1,8 @@
 *~
 *.class
 
+/Netbeans/Drawing/nbproject/private/
+/workspace/Session08/nbproject/private/
+/workspace/JavaSwingDemos/nbproject/private/
+/workspace/processingWin/nbproject/private/
+/workspace/Session08/build/

@@ -19,6 +19,12 @@ public class PlayWithMaps {
 			System.out.println(pair.getKey() + "," + pair.getValue());
 		}
 
+		for (Iterator<HashMap.Entry<String, Double>> it2 = prices.entrySet().iterator();
+				it2.hasNext(); ) {
+			Map.Entry<String, Double> pair = it2.next();
+			System.out.println(pair.getKey() + "," + pair.getValue());
+		}
+
 		prices.forEach((k, v) -> System.out.println(k + ","  + v));
 		//https://stackoverflow.com/questions/46898/how-to-efficiently-iterate-over-each-entry-in-a-map
 		

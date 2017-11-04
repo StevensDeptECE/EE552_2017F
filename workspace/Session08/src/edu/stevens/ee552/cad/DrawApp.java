@@ -2,6 +2,7 @@ package edu.stevens.ee552.cad;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import edu.stevens.ee552.cad.components.*;
 
 public class DrawApp extends JFrame {
 	private boolean dirty;
@@ -11,8 +12,14 @@ public class DrawApp extends JFrame {
 		p.setLayout(new GridLayout(3, 1));
 		JButton b;
 		dirty = true;
-		p.add(b=new JButton("line"));		
-		p.add(b=new JButton("ellipse"));		
+		p.add(b=new JButton("line"));
+                b.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        da.setMode(new LineMode());
+                    }
+                });
+		p.add(b=new ModalButton("ellipse", da, new CircleMode()));
+                
 		p.add(b=new JButton("rect"));
 		c.add(p, BorderLayout.WEST);
 	}
@@ -75,9 +82,9 @@ public class DrawApp extends JFrame {
 	}
 	public DrawApp( ) {
 		Container c = getContentPane();
+		da = new DrawArea();
 		buildToolbar(c);
 		handleEvents();
-		da = new DrawArea();
 		c.add(da, BorderLayout.CENTER);
 		setSize(700,400);
 		setVisible(true);

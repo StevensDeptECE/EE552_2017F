@@ -7,4 +7,5 @@ public abstract class Shape {
 	public abstract void draw(Graphics g);
 	public int getX() { return x; }
 	public int getY() { return y; }
+        public abstract void setPoint2(int x2, int y2);
 }
